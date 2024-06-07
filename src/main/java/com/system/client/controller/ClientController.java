@@ -19,12 +19,12 @@ public class ClientController {
 	
 	@Autowired
     private ClientService clientService;
-	
-	
-	@PostMapping
-    public ResponseEntity<OutputDTO> createClient(@RequestBody ClientDTO client) {
+
+
+	@PostMapping("/get")
+    public String createClient(@RequestBody ClientDTO client) {
         OutputDTO output = clientService.create(client);
-        return new ResponseEntity<>(output, HttpStatus.CREATED);
+        return "new ResponseEntity<>(output, HttpStatus.CREATED);";
     }
 
 }

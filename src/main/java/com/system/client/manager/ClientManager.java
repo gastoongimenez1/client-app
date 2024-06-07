@@ -12,24 +12,24 @@ public class ClientManager extends Manager<ClientDTO> {
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("clients");
 	EntityManager em = emf.createEntityManager();
 	
+	
 	@Override
 	public void create(ClientDTO input) {
-		
-		
 		em.persist(input);
+		
 	}
-
 	@Override
 	public void update(ClientDTO input) {
 		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void delete(ClientDTO input) {
 		// TODO Auto-generated method stub
 		
 	}
+	
+
 
 	
 }
